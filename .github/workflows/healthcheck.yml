@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
       - name: Healthcheck
         env:
-          HF_REPO: ${{ vars.HF_REPO }}
+          HF_REPO: n8n-free
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
@@ -29,8 +29,8 @@ jobs:
             echo "::error::HF_REPO must be in owner/space format"
             exit 1
           fi
-          owner=${HF_REPO%%/*}
-          space=${HF_REPO#*/}
+          owner=w77mm77w
+          space=n8n-free
           space_host="${owner}-${space}.hf.space"
 
           git config user.name "github-actions[bot]"
