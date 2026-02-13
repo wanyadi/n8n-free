@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Huggingface Keep-Alive Ping
         env:
-          HF_REPO: ${{ vars.HF_REPO }}
+          HF_REPO: n8n-free
         run: |
           if [ -z "$HF_REPO" ]; then
             echo "::error::HF_REPO is not set"
@@ -21,7 +21,7 @@ jobs:
             echo "::error::HF_REPO must be in owner/space format"
             exit 1
           fi
-          owner=${HF_REPO%%/*}
-          space=${HF_REPO#*/}
+          owner=w77mm77w
+          space=n8n-free
           space_host="${owner}-${space}.hf.space"
           curl "https://${space_host}"
